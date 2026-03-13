@@ -207,7 +207,9 @@ Then replace the native search `<input>` in `index.astro` with the Pagefind UI w
 
 ## 📜 License
 
-MIT — feel free to fork and make it your own.
+The code in this repository (layouts, components, plugins, configs, etc.) is licensed under the [MIT License](./LICENSE).
+
+**Blog content** (`src/content/posts/`) is **not** covered by the MIT License — all rights reserved. Some posts are personal study notes that may reference or summarize third-party sources.
 
 ---
 
