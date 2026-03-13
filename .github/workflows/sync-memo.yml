@@ -2,8 +2,12 @@ name: Sync memo to posts
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # 每天 UTC 00:00（北京时间 08:00）
+    - cron: "0 0 * * *" # 每天 UTC 00:00（北京时间 08:00）
   workflow_dispatch:
+
+concurrency:
+  group: sync-memo
+  cancel-in-progress: true
 
 permissions:
   contents: write
@@ -16,21 +20,26 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
+          fetch-depth: 1
 
       - name: Checkout memo（源仓库）
         uses: actions/checkout@v4
         with:
           repository: Cyanix-0721/memo
-          path: memo_repo
+          path: ${{ runner.temp }}/memo_repo
           ref: main
+          fetch-depth: 1
           token: ${{ secrets.PAT_TOKEN }}
 
       - name: Sync memo folder to src/content/posts
         run: |
-          rsync -avu --delete memo_repo/memo/ ./src/content/posts/
-
-      - name: Remove memo_repo directory
-        run: rm -rf memo_repo
+          rsync -avu --delete \
+            --exclude='.obsidian/' \
+            --exclude='.trash/' \
+            --exclude='*.canvas' \
+            --exclude='*.excalidraw.md' \
+            --filter='- .gitignore' \
+            ${{ runner.temp }}/memo_repo/memo/ ./src/content/posts/
 
       - name: Commit and push if changed
         run: |
