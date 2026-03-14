@@ -1,7 +1,9 @@
 ---
-tags:
-  - Framework
-  - SpringCloud
+tags: [Framework, SpringCloud]
+title: Spring Cloud Bus
+date created: 2024-09-14 08:51:09
+date modified: 2026-03-14 09:35:38
+date: 2026-03-14 11:53:22
 ---
 
 # Spring Cloud Bus

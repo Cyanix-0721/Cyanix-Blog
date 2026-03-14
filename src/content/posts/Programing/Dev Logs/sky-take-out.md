@@ -1,23 +1,10 @@
 ---
-tags:
-  - Project
-  - Thread
-  - TimeFormat
-  - Jackson
-  - JSON
-  - AOP
-  - Mybatis-Plus
-  - MyBatis
-  - OSS
-  - Wechat
-  - Login
-  - Map
-  - SpringTask
-  - Cron
-  - WebSocket
-  - Apache
-  - ApacheECharts
-  - ApachePOI
+tags: [Project, Thread, TimeFormat, Jackson, JSON, AOP, Mybatis-Plus, MyBatis, OSS, Wechat, Login, Map, SpringTask, Cron, WebSocket, Apache, ApacheECharts, ApachePOI]
+title: Sky-take-out
+aliases: Sky-take-out
+date created: 2024-08-15 04:19:28
+date modified: 2026-03-14 09:35:23
+date: 2026-03-14 11:53:22
 ---
 
 # Sky-take-out
@@ -1620,7 +1607,7 @@ checkOutOfRange(addressBook.getCityName() + addressBook.getDistrictName() + addr
 > 4. 日（1-31）
 > 5. 月（1-12）
 > 6. 星期（0-7，0和7都表示星期日）
->
+> 
 > 因此，`@Scheduled(cron = "0 0 1 * * ?")` 表示每天凌晨1点执行一次任务。具体解释如下：
 >
 > - `0`：秒（0秒）
@@ -1629,7 +1616,7 @@ checkOutOfRange(addressBook.getCityName() + addressBook.getDistrictName() + addr
 > - `*`：日（每一天）
 > - `*`：月（每个月）
 > - `?`：星期（不指定）
->
+> 
 > 这就是为什么在 Spring 的 `@Scheduled` 注解中，cron 表达式有六个字段。
 
 `OrderTask`

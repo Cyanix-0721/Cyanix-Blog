@@ -1,3 +1,11 @@
+---
+tags: 
+title: Spring Boot整合MongoDB和MySQL(MyBatis)指南
+date created: 2024-10-15 07:03:18
+date modified: 2026-03-14 09:35:37
+date: 2026-03-14 11:53:22
+---
+
 # Spring Boot整合MongoDB和MySQL(MyBatis)指南
 
 ## 1 添加依赖

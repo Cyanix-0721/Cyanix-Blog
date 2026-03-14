@@ -1,3 +1,13 @@
+---
+tags: 
+title: HDFS
+date created: 2024-08-15 04:19:28
+date modified: 2026-03-14 09:35:26
+date: 2026-03-14 11:53:22
+---
+
+# HDFS
+
 > [!info]
 > - [HDFS Commands Guide](https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-hdfs/HDFSCommands.html)  
 > - [HDFS Commands Guide (Hadoop 2)](https://hadoop.apache.org/docs/r2.7.7/hadoop-project-dist/hadoop-hdfs/HDFSCommands.html)  
@@ -21,10 +31,10 @@ hdfs dfs <command> [options] [paths]
 
 其中：
 
-* `hdfs dfs`：表示使用 HDFS Shell
-* `<command>`：要执行的命令
-* `[options]`：命令选项
-* `[paths]`：命令参数
+- `hdfs dfs`：表示使用 HDFS Shell
+- `<command>`：要执行的命令
+- `[options]`：命令选项
+- `[paths]`：命令参数
 
 ### 1.3 基本命令
 
@@ -49,73 +59,73 @@ hdfs dfs <command> [options] [paths]
 
 以下是一些 HDFS Shell 命令示例：
 
-* 列出当前目录下的文件和目录：
+- 列出当前目录下的文件和目录：
 
 ```
 hdfs dfs ls
 ```
 
-* 创建名为 `mydir` 的目录：
+- 创建名为 `mydir` 的目录：
 
 ```
 hdfs dfs mkdir mydir
 ```
 
-* 删除空目录 `mydir`：
+- 删除空目录 `mydir`：
 
 ```
 hdfs dfs rmdir mydir
 ```
 
-* 删除文件 `myfile`：
+- 删除文件 `myfile`：
 
 ```
 hdfs dfs rm myfile
 ```
 
-* 将本地文件 `myfile` 上传到 HDFS 目录 `/mydir`：
+- 将本地文件 `myfile` 上传到 HDFS 目录 `/mydir`：
 
 ```
 hdfs dfs put myfile /mydir
 ```
 
-* 将 HDFS 文件 `/mydir/myfile` 下载到本地：
+- 将 HDFS 文件 `/mydir/myfile` 下载到本地：
 
 ```
 hdfs dfs get /mydir/myfile
 ```
 
-* 显示文件 `/mydir/myfile` 的内容：
+- 显示文件 `/mydir/myfile` 的内容：
 
 ```
 hdfs dfs cat /mydir/myfile
 ```
 
-* 更改文件 `/mydir/myfile` 的权限为 755：
+- 更改文件 `/mydir/myfile` 的权限为 755：
 
 ```
 hdfs dfs chmod 755 /mydir/myfile
 ```
 
-* 更改文件 `/mydir/myfile` 的所有者为 `root`：
+- 更改文件 `/mydir/myfile` 的所有者为 `root`：
 
 ```
 hdfs dfs chown root /mydir/myfile
 ```
 
-* 更改文件 `/mydir/myfile` 的所属组为 `hadoop`：
+- 更改文件 `/mydir/myfile` 的所属组为 `hadoop`：
 
 ```
 hdfs dfs chgrp hadoop /mydir/myfile
 ```
 
-* 显示文件 `/mydir/myfile` 的大小：
+- 显示文件 `/mydir/myfile` 的大小：
 
 ```
 hdfs dfs du /mydir/myfile
 ```
 
-* 显示文件 `/mydir/myfile` 的状态信息：
+- 显示文件 `/mydir/myfile` 的状态信息：
 
 ```
 hdfs dfs stat /mydir/myfile

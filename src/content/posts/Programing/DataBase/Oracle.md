@@ -1,3 +1,12 @@
+---
+tags: 
+title: Oracle 数据库
+aliases: Oracle 数据库
+date created: 2024-08-15 04:19:28
+date modified: 2026-03-14 09:35:23
+date: 2026-03-14 11:53:22
+---
+
 > [!info]  
 > [Oracle 官方文档](https://docs.oracle.com/en/database/)  
 > [Oracle Learning Library](https://www.oracle.com/learning-library/)
@@ -282,7 +291,7 @@ CREATE INDEX index_name ON table_name(column_name);
 CREATE UNIQUE INDEX index_name ON table_name(column_name);
 ```
 
-2. **组合索引：**  
+1. **组合索引：**  
 在表的多个列上创建的索引，也称为“连接索引”。组合索引中的列可以按任意顺序排列。对于在 `WHERE` 子句中包含多个列的查询，可以提高数据访问速度。
 
 **创建组合索引的语法：**
@@ -291,7 +300,7 @@ CREATE UNIQUE INDEX index_name ON table_name(column_name);
 CREATE INDEX index_name ON table_name(column1, column2);
 ```
 
-3. **索引组织表：**  
+1. **索引组织表：**  
 表的数据存储在与其关联的索引中，对表数据的增删改只会导致对索引的更新。
 
 ## 3 SQL

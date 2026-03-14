@@ -1,3 +1,11 @@
+---
+tags: 
+title: Spring Cloud Alibaba Seata
+date created: 2024-09-14 15:47:00
+date modified: 2026-03-14 09:35:38
+date: 2026-03-14 11:53:22
+---
+
 # Spring Cloud Alibaba Seata
 
 **Spring Cloud Alibaba Seata** 是一个专门用于解决分布式事务问题的开源框架。分布式事务是指在分布式系统中跨多个服务或数据库的事务，通常很难保证数据一致性。Seata 提供了高效、简单的分布式事务解决方案，支持微服务架构中的**强一致性**和**最终一致性**。

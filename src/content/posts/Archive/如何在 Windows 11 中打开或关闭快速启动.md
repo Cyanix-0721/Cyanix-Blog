@@ -1,3 +1,11 @@
+---
+tags: 
+title: 如何在 Windows 11 中打开或关闭快速启动
+date created: 2024-08-15 04:19:28
+date modified: 2026-03-14 09:35:19
+date: 2026-03-14 11:53:22
+---
+
 # [如何在 Windows 11 中打开或关闭快速启动](https://cn.windows-office.net/?p=9117)
 
 ---

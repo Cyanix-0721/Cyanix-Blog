@@ -1,7 +1,9 @@
 ---
-tags:
-  - SpringBoot
-  - Monitor
+tags: [SpringBoot, Monitor]
+title: Spring Boot Admin
+date created: 2024-10-08 02:32:00
+date modified: 2026-03-14 09:35:38
+date: 2026-03-14 11:53:22
 ---
 
 # Spring Boot Admin

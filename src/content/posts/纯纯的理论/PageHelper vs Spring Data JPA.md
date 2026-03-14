@@ -1,8 +1,9 @@
 ---
-tags:
-  - SpringBoot
-  - MyBatis
-  - 分页
+tags: [SpringBoot, MyBatis, 分页]
+title: PageHelper vs Spring Data JPA
+date created: 2024-10-10 15:44:35
+date modified: 2026-03-14 09:35:20
+date: 2026-03-14 11:53:22
 ---
 
 # PageHelper vs Spring Data JPA

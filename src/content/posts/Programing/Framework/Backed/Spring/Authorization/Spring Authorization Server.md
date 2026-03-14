@@ -1,3 +1,11 @@
+---
+tags: 
+title: Spring Authorization Server
+date created: 2024-09-15 08:09:57
+date modified: 2026-03-14 09:35:37
+date: 2026-03-14 11:53:22
+---
+
 # Spring Authorization Server
 
 在微服务架构中，**Spring Authorization Server** 为构建统一的认证与授权服务提供了极大的便利。通过它，开发者可以快速实现 OAuth2 的认证服务、客户端、资源服务等功能，并结合 Spring Cloud Gateway 实现基于 OAuth2 的微服务权限控制。

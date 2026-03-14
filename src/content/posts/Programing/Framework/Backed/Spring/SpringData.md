@@ -1,11 +1,9 @@
 ---
-tags:
-  - SpringData
-  - JPA
-  - Hibernate
-  - RESTful
-  - Swagger
-  - SpringBoot
+tags: [SpringData, JPA, Hibernate, RESTful, Swagger, SpringBoot]
+title: SpringData
+date created: 2024-08-15 04:19:28
+date modified: 2026-03-14 09:35:37
+date: 2026-03-14 11:53:22
 ---
 
 # SpringData
@@ -188,23 +186,23 @@ public static void main( String[] args )
 >
 > * **@Entity:** 标识一个类为实体类，表示它将映射到数据库中的一个表。
 > 	* `name` (可选): 指定实体类对应的表名，默认为实体类的简单名称。
->
+> 
 > * **@Table:** 指定实体类映射的数据库表的信息。
 > 	* `name` (可选): 指定表名，默认为实体类的简单名称。
 > 	* `catalog` (可选): 指定数据库的 catalog。
 > 	* `schema` (可选): 指定数据库的 schema。
 > 	* `uniqueConstraints` (可选): 指定表的唯一约束。
 > 	* `indexes` (可选): 指定表的索引。
->
+> 
 > * **@Id:** 标识实体类的主键属性。
->
+> 
 > * **@GeneratedValue:** 指定主键生成策略。
 > 	* `strategy`: 主键生成策略，常用的有：
 > 		* `GenerationType.IDENTITY`: 数据库自增 (适用于 MySQL, SQL Server)。
 > 		* `GenerationType.SEQUENCE`: 数据库序列 (适用于 Oracle)。
 > 		* `GenerationType.TABLE`: 数据库表生成 (适用于不支持自增和序列的数据库)。
 > 		* `GenerationType.AUTO`: 由 Hibernate 根据底层数据库自动选择。
->
+> 
 > * **@Column:** 指定实体类属性映射的数据库列的信息。
 > 	* `name` (可选): 指定列名，默认为属性名称。
 > 	* `unique` (可选): 是否唯一。

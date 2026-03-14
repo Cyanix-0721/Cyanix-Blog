@@ -1,3 +1,11 @@
+---
+tags: 
+title: Spring中的ResponseBodyAdvice和ControllerAdvice详细指南
+date created: 2024-10-21 15:25:47
+date modified: 2026-03-14 09:35:37
+date: 2026-03-14 11:53:22
+---
+
 # Spring中的ResponseBodyAdvice和ControllerAdvice详细指南
 
 ## 1 ControllerAdvice简介

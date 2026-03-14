@@ -1,3 +1,11 @@
+---
+tags: 
+title: 领域驱动设计（DDD）模式概述
+date created: 2024-10-14 15:50:06
+date modified: 2026-03-14 09:35:22
+date: 2026-03-14 11:53:22
+---
+
 # 领域驱动设计（DDD）模式概述
 
 领域驱动设计（Domain-Driven Design，DDD）是一种软件开发方法，focuses on the core domain and domain logic，通过将复杂的设计和实现过程与不断演进的模型相结合。以下是DDD中的一些关键模式和概念。

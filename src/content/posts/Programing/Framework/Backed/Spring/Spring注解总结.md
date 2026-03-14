@@ -1,3 +1,12 @@
+---
+tags: 
+title: Spring 注解总结
+aliases: Spring 注解总结
+date created: 2024-09-28 08:48:57
+date modified: 2026-03-14 09:35:37
+date: 2026-03-14 11:53:22
+---
+
 # Spring 注解总结
 
 在 Spring Boot 与 MyBatis 整合过程中，使用的常用注解可以分为 Spring 的基础注解和 MyBatis 特有的注解

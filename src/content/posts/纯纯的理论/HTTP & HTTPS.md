@@ -1,3 +1,12 @@
+---
+tags: 
+title: HTTP vs HTTPS
+aliases: HTTP vs HTTPS
+date created: 2024-11-15 01:30:26
+date modified: 2026-03-14 09:35:20
+date: 2026-03-14 11:53:22
+---
+
 # HTTP vs HTTPS
 
 ## 1 基本概念

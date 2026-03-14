@@ -1,3 +1,12 @@
+---
+tags: 
+title: "**Spring IoC（控制反转）**"
+aliases: "**Spring IoC（控制反转）**"
+date created: 2024-11-21 06:50:59
+date modified: 2026-03-14 09:35:20
+date: 2026-03-14 11:53:22
+---
+
 # **Spring IoC（控制反转）**
 
 Spring IoC（Inversion of Control）是 Spring 框架的核心模块之一，旨在通过容器管理对象的创建、初始化、依赖注入和生命周期。IoC 的核心思想是将对象的控制权从应用程序代码转移到 Spring 容器，由容器负责管理对象及其依赖关系。

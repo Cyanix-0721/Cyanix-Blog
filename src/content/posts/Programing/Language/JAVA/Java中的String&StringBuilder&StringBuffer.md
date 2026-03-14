@@ -1,9 +1,9 @@
 ---
-tags:
-  - ApachePOI
-  - Language
-  - Java
-  - String
+tags: [ApachePOI, Language, Java, String]
+title: Java中的String&StringBuilder&StringBuffer
+date created: 2024-09-09 07:35:45
+date modified: 2026-03-14 09:35:34
+date: 2026-03-14 11:53:22
 ---
 
 # Java中的String&StringBuilder&StringBuffer

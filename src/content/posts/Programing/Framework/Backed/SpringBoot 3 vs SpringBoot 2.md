@@ -1,3 +1,12 @@
+---
+tags: 
+title: SpringBoot 3 Vs SpringBoot 2
+aliases: SpringBoot 3 Vs SpringBoot 2
+date created: 2024-09-23 14:22:13
+date modified: 2026-03-14 09:35:26
+date: 2026-03-14 11:53:22
+---
+
 # SpringBoot 3 Vs SpringBoot 2
 
 Spring Boot 3 相较于 Spring Boot 2，引入了许多新特性和改进，主要体现在框架的现代化、兼容性、性能优化等方面。以下是Spring Boot 3的主要新特性：

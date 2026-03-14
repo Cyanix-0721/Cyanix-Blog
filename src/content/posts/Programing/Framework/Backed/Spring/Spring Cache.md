@@ -1,3 +1,11 @@
+---
+tags: 
+title: Spring Cache
+date created: 2024-11-19 15:20:53
+date modified: 2026-03-14 09:35:36
+date: 2026-03-14 11:53:22
+---
+
 # Spring Cache
 
 Spring 提供了一套强大的缓存抽象（Spring Cache），通过 Redis 等多种存储介质实现缓存功能。以下是 Spring 中与 Redis 缓存相关的常用注解详解，包括其功能、用法和注意事项。

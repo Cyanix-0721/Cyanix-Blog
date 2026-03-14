@@ -1,3 +1,11 @@
+---
+tags: 
+title: RBAC
+date created: 2024-11-19 14:11:33
+date modified: 2026-03-14 09:35:20
+date: 2026-03-14 11:53:22
+---
+
 # RBAC
 
 以下是关于 **基于角色的访问控制 (RBAC)** 的 Markdown 文档模板，介绍其概念、优势、模型及实现。  

@@ -1,8 +1,9 @@
 ---
-tags:
-  - SpringBoot
-  - RestTemplate
-  - WebClient
+tags: [SpringBoot, RestTemplate, WebClient]
+title: RestTemplate & WebClient
+date created: 2024-10-19 07:59:56
+date modified: 2026-03-14 09:35:37
+date: 2026-03-14 11:53:22
 ---
 
 # RestTemplate & WebClient

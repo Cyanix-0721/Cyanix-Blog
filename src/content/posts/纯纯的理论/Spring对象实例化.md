@@ -1,3 +1,11 @@
+---
+tags: 
+title: Spring对象实例化
+date created: 2024-11-21 05:52:13
+date modified: 2026-03-14 09:35:20
+date: 2026-03-14 11:53:22
+---
+
 # Spring对象实例化
 
 > [!summary] Spring对象实例化：核心方法与最佳实践
@@ -56,7 +64,7 @@ public class ExampleService {
 > @Mock
 > UserRepository mockRepository;
 > ```
->
+> 
 > 2. **显式依赖**: 构造器参数明确表明了测试需要mock哪些依赖
 > 3. **隔离性**: 不依赖Spring容器，可以进行真正的单元测试
 > 4. **性能**: 避免启动Spring测试上下文带来的额外开销

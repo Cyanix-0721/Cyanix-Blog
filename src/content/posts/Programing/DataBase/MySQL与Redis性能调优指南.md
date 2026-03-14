@@ -1,3 +1,11 @@
+---
+tags: 
+title: MySQL与Redis性能调优指南
+date created: 2024-10-30 05:05:23
+date modified: 2026-03-14 09:35:22
+date: 2026-03-14 11:53:22
+---
+
 # MySQL与Redis性能调优指南
 
 ## 1 MySQL性能调优

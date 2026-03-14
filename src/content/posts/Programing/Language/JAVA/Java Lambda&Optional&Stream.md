@@ -1,3 +1,12 @@
+---
+tags: 
+title: Java `Lambda` & `Optional` & `Stream`
+aliases: Java `Lambda` & `Optional` & `Stream`
+date created: 2024-09-14 08:01:35
+date modified: 2026-03-14 09:35:34
+date: 2026-03-14 11:53:22
+---
+
 # Java `Lambda` & `Optional` & `Stream`
 
 > [!summary] 总结

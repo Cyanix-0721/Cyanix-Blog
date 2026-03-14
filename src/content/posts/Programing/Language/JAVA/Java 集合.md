@@ -1,3 +1,11 @@
+---
+tags: 
+title: Java 集合
+date created: 2024-09-10 02:50:26
+date modified: 2026-03-14 09:35:34
+date: 2026-03-14 11:53:22
+---
+
 # Java 集合
 
 > [!summary]

@@ -1,3 +1,11 @@
+---
+tags: 
+title: MyBatis Generator (MBG)
+date created: 2024-09-25 06:05:50
+date modified: 2026-03-14 09:35:35
+date: 2026-03-14 11:53:22
+---
+
 # MyBatis Generator (MBG)
 
 **简介**：  
@@ -20,7 +28,7 @@ MyBatis Generator（MBG）是一个用于自动生成 MyBatis 映射文件和 Ja
 >   - 支持生成 CRUD 操作，自动生成 Mapper 和 XML 文件。
 >   - 提供代码重构和修改的功能，保持与数据库的同步。
 > - **优点**：可视化操作方便开发者，无需手动编辑 XML 配置，提升了工作效率。
->
+> 
 > **EasyCode**：
 > - **简介**：EasyCode 是一个代码生成工具，提供丰富的配置选项和模板功能。
 > - **功能**：

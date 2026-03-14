@@ -1,3 +1,11 @@
+---
+tags: 
+title: RestTemplate
+date created: 2024-10-09 06:44:08
+date modified: 2026-03-14 09:35:38
+date: 2026-03-14 11:53:22
+---
+
 # RestTemplate
 
 `RestTemplate` 是 Spring 提供的用于同步 HTTP 请求的客户端，主要用于与 RESTful 服务进行通信。虽然 Spring 官方建议新项目使用响应式的 `WebClient`，但 `RestTemplate` 在许多场景下依然很常用，尤其是在需要简单同步 HTTP 请求的场景中。

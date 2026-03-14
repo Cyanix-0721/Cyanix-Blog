@@ -1,3 +1,11 @@
+---
+tags: 
+title: BeanUtils
+date created: 2024-09-19 08:43:58
+date modified: 2026-03-14 09:35:37
+date: 2026-03-14 11:53:22
+---
+
 # BeanUtils
 
 `BeanUtils` 是 Apache Commons 提供的一个实用工具类库，用于简化 JavaBean 的操作，特别是在属性复制、属性设置等方面。`BeanUtils` 常用于 Java 项目中来处理对象属性间的转换与拷贝，大大提高了开发效率。

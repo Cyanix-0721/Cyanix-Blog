@@ -1,3 +1,11 @@
+---
+tags: 
+title: Paru
+date created: 2024-08-15 04:19:28
+date modified: 2026-03-14 09:35:26
+date: 2026-03-14 11:53:22
+---
+
 # Paru
 
 ## 1 Install

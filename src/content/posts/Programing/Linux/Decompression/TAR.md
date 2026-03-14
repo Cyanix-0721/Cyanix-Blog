@@ -1,3 +1,12 @@
+---
+tags: 
+title: Linux Tar命令
+aliases: Linux Tar命令
+date created: 2024-08-15 04:19:28
+date modified: 2026-03-14 09:35:35
+date: 2026-03-14 11:53:22
+---
+
 # Linux Tar命令
 
 `tar`是Linux和Unix系统中的一个命令行工具，用于创建、管理和提取tar归档文件。tar归档文件是一种将多个文件和目录打包成一个文件的方式，常用于备份和分发。

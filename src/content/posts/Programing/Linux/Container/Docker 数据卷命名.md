@@ -1,3 +1,11 @@
+---
+tags: 
+title: Docker 数据卷命名
+date created: 2024-09-20 03:02:40
+date modified: 2026-03-14 09:35:34
+date: 2026-03-14 11:53:22
+---
+
 # Docker 数据卷命名
 
 在 Docker Compose 文件中定义数据卷时，如果未显式声明数据卷名称，Docker 会根据项目名称和卷名自动生成一个名称，通常形式为 `<project_name>_<volume_name>`。为了更好的理解和管理数据卷，有以下几种方式：

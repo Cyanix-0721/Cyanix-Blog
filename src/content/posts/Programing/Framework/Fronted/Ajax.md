@@ -1,3 +1,11 @@
+---
+tags: 
+title: Ajax
+date created: 2024-09-30 09:13:09
+date modified: 2026-03-14 09:35:26
+date: 2026-03-14 11:53:22
+---
+
 # Ajax
 
 Ajax（Asynchronous JavaScript and XML）是一种在不重新加载整个页面的情况下与服务器交换数据并更新部分网页的技术。以下是几种实现Ajax的方式，分别包括原生实现和基于第三方库的实现。

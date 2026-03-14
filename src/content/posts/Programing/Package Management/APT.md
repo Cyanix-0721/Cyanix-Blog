@@ -1,3 +1,11 @@
+---
+tags: 
+title: APT
+date created: 2024-08-15 04:19:28
+date modified: 2026-03-14 09:35:25
+date: 2026-03-14 11:53:22
+---
+
 # APT
 
 ## 1 Debian 系统上的高级软件包管理工具：apt

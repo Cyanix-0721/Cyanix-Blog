@@ -1,3 +1,12 @@
+---
+tags: 
+title: Fastfetch
+aliases: Fastfetch
+date created: 2024-08-16 07:12:55
+date modified: 2026-03-14 09:35:24
+date: 2026-03-14 11:53:22
+---
+
 # Fastfetch
 
 `fastfetch` 是一款轻量级且快速的系统信息工具，类似于 `neofetch`，用于在终端中展示系统和硬件信息。

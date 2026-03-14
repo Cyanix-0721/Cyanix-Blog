@@ -1,7 +1,10 @@
 ---
-tags:
-  - Vue
-  - Pinia
+tags: [Vue, Pinia]
+title: Pinia 使用文档
+aliases: Pinia 使用文档
+date created: 2024-08-15 04:19:28
+date modified: 2026-03-14 09:35:36
+date: 2026-03-14 11:53:22
 ---
 
 # Pinia 使用文档

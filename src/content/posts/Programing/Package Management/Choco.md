@@ -1,3 +1,12 @@
+---
+tags: 
+title: Chocolatey (choco)
+aliases: Chocolatey (choco)
+date created: 2024-08-15 04:19:28
+date modified: 2026-03-14 09:35:26
+date: 2026-03-14 11:53:22
+---
+
 # Chocolatey (choco)
 
 [Chocolatey](https://chocolatey.org/)，通常简称为 choco，是一个适用于 Windows 的命令行包管理器。它简化了在系统上安装、更新和管理软件包的过程。

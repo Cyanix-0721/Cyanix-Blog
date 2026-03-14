@@ -1,8 +1,10 @@
 ---
-tags:
-  - SpringBoot
-  - Redis
-  - Redission
+tags: [SpringBoot, Redis, Redission]
+title: SpringBoot集成Redisson
+aliases: SpringBoot集成Redisson
+date created: 2024-10-22 17:11:07
+date modified: 2026-03-14 09:35:25
+date: 2026-03-14 11:53:22
 ---
 
 # SpringBoot集成Redisson

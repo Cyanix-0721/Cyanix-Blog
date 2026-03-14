@@ -1,3 +1,11 @@
+---
+tags: 
+title: DISM & SFC 修复
+date created: 2024-09-18 08:40:14
+date modified: 2026-03-14 09:35:26
+date: 2026-03-14 11:53:22
+---
+
 # DISM & SFC 修复
 
 在 Windows 11 中，DISM（Deployment Imaging Service and Management Tool）工具可以用来修复系统映像并解决系统文件损坏问题。以下是使用 DISM 修复系统的步骤：

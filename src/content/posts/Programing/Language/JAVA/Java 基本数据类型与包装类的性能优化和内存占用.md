@@ -1,7 +1,10 @@
 ---
-tags:
-  - Language
-  - Java
+tags: [Language, Java]
+title: 基本数据类型与包装类的性能优化和内存占用
+aliases: 基本数据类型与包装类的性能优化和内存占用
+date created: 2024-08-15 04:19:28
+date modified: 2026-03-14 09:35:34
+date: 2026-03-14 11:53:22
 ---
 
 # 基本数据类型与包装类的性能优化和内存占用

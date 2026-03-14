@@ -1,3 +1,12 @@
+---
+tags: 
+title: JavaScript 中的变量声明：`var`、`let` 和 `const` 的区别
+aliases: JavaScript 中的变量声明：`var`、`let` 和 `const` 的区别
+date created: 2024-11-21 06:54:22
+date modified: 2026-03-14 09:35:21
+date: 2026-03-14 11:53:22
+---
+
 # JavaScript 中的变量声明：`var`、`let` 和 `const` 的区别
 
 在 Vue 和 JavaScript 中，变量的声明方式对代码的行为和可维护性有重要影响。ES 6 引入了 `let` 和 `const`，替代了传统的 `var`，提供了更严格的作用域和安全性。以下是对 `var`、`let` 和 `const` 的详细对比和介绍：

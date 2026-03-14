@@ -1,10 +1,9 @@
 ---
-tags:
-  - Github
-  - Action
-  - Workflow
-  - Sync
-  - CI/CD
+tags: [Github, Action, Workflow, Sync, CI/CD]
+title: Action&Workflow
+date created: 2024-08-15 04:19:28
+date modified: 2026-03-14 09:35:22
+date: 2026-03-14 11:53:22
 ---
 
 # Action&Workflow
@@ -90,69 +89,109 @@ tags:
 >     ```
 
 ```yaml
-# 工作流名称：Sync B to A
-# 该工作流自动从 B 仓库同步文件到 A 仓库
-name: Sync B to A
+# 工作流名称：Sync files from source repository
+# 该工作流用于自动将“源仓库”的指定目录同步到“当前仓库”的指定目录
+
+name: Sync files from source repository
 
 # 工作流触发条件
 on:
-  # 定时触发：每天午夜运行一次
+  # 定时触发：每天运行一次
   schedule:
-    - cron: '0 0 * * *'
-  # 手动触发：在 GitHub Actions 页面手动触发
+    # UTC 00:00 运行（北京时间 08:00）
+    - cron: "0 0 * * *"
+
+  # 手动触发：允许在 GitHub Actions 页面手动运行
   workflow_dispatch:
+
+# 并发控制
+# 防止同一个工作流同时运行多个实例
+concurrency:
+  group: repository-file-sync
+  cancel-in-progress: true
 
 # 为 GITHUB_TOKEN 设置权限
 permissions:
-  contents: write  # 允许工作流对仓库内容进行写操作
+  contents: write  # 允许工作流向仓库提交和推送更改
 
-# 定义作业（jobs）
+# 定义作业
 jobs:
   sync:
-    # 指定运行环境：使用最新的 Ubuntu LTS 版本
+    # 运行环境：GitHub 托管的最新 Ubuntu Runner
     runs-on: ubuntu-latest
 
-    # 步骤定义
     steps:
-      # 第一步：检出（Checkout）A 仓库的代码
-      - name: Checkout A repository
-        uses: actions/checkout@v4  # 使用官方的 checkout 动作
+
+      # 步骤 1：检出当前仓库（目标仓库）
+      # 同步后的文件将写入这里
+      - name: Checkout target repository
+        uses: actions/checkout@v4
         with:
-          ref: main  # 检出 A 仓库的 main 分支
+          ref: main          # 检出 main 分支
+          fetch-depth: 1     # 只获取最近一次提交以加快速度
 
-      # 第二步：检出 B 仓库的代码
-      - name: Checkout B repository
-        uses: actions/checkout@v4  # 依然使用 checkout 动作
+      # 步骤 2：检出源仓库
+      # 将需要同步的仓库 clone 到本地目录
+      - name: Checkout source repository
+        uses: actions/checkout@v4
         with:
-          repository: owner/repository-name  # 指定 B 仓库的所有者和仓库名，替换为实际值
-          path: B_repo  # 将 B 仓库检出到本地的 B_repo 目录
-          ref: main  # 检出 B 仓库的 main 分支
-          token: ${{ secrets.PAT_TOKEN }}  # 使用 GitHub Secrets 中的个人访问令牌 (PAT) 进行身份验证
+          repository: <SOURCE_OWNER>/<SOURCE_REPOSITORY>  # 源仓库
+          path: source_repo                               # 本地目录
+          ref: main                                       # 源仓库分支
+          fetch-depth: 1
+          token: ${{ secrets.PAT_TOKEN }}                 # 用于访问私有仓库
 
-      # 第三步：同步 B 仓库中的文件到 A 仓库
-      - name: Sync files from B to A
+      # 步骤 3：同步指定目录
+      - name: Sync files from source to target
         run: |
-          # 使用 rsync 命令同步 B_repo 目录下的文件到当前工作目录中的对应目录
-          rsync -avu --delete B_repo/folder1/ ./folder1/  # 同步文件夹1，删除 A 仓库中不存在于 B 仓库的文件
-          rsync -avu --delete B_repo/folder2/ ./folder2/  # 同步文件夹2，同上
+          # 使用 rsync 进行增量同步
+          #
+          # 参数说明：
+          # -a  归档模式（保持文件属性）
+          # -v  输出详细日志
+          # -u  只更新较新的文件
+          # --delete  删除目标目录中源仓库不存在的文件
+          
+          rsync -avu --delete \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='.gitignore' \
+            source_repo/<SOURCE_FOLDER>/ ./<TARGET_FOLDER>/
 
-      # 第四步：移除临时的 B_repo 目录
-      - name: Remove B_repo directory
-        run: rm -rf B_repo  # 删除 B 仓库的检出目录，清理工作目录
+          # 示例说明：
+          #
+          # source_repo/docs/      -> 源仓库目录
+          # ./docs/                -> 当前仓库目标目录
 
-      # 第五步：提交并推送更改到 A 仓库
-      - name: Commit and push changes
+      # 步骤 4：检测是否有变更并提交
+      - name: Commit and push if changed
         run: |
-          # 配置 Git 用户信息，以便工作流提交更改时显示正确的提交者信息
-          git config user.name "GitHub Actions Bot"  # 使用通用的 GitHub Actions Bot 名称
-          git config user.email "actions@github.com"  # 使用通用的 GitHub Actions 邮箱
-          
-          # 添加所有更改文件并提交到本地仓库
-          git add .
-          git commit -m "Sync files from B repository"  # 添加提交信息
-          
-          # 推送更改到 A 仓库的远程 main 分支
+
+          # 配置 Git 提交身份
+          git config user.name "github-actions[bot]"
+          git config user.email "actions@users.noreply.github.com"
+
+          # 添加同步后的文件
+          git add <TARGET_FOLDER>/
+
+          # 如果没有变化则退出
+          if git diff --staged --quiet; then
+            echo "No changes detected, nothing to commit."
+            exit 0
+          fi
+
+          # 获取源仓库 commit 短 SHA
+          SOURCE_SHA=$(git -C source_repo rev-parse --short HEAD)
+
+          # 提交更改
+          git commit -m "chore: sync files from <SOURCE_REPOSITORY>@${SOURCE_SHA} $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+
+          # 推送到当前仓库
           git push
+
+          echo "Files have been synced and pushed successfully!"
+
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # 使用 GITHUB_TOKEN 环境变量进行身份验证，推送更改到 A 仓库
+          # GitHub 自动提供的 Token
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```

@@ -1,3 +1,12 @@
+---
+tags: 
+title: Npm
+aliases: Npm
+date created: 2024-11-26 05:57:50
+date modified: 2026-03-14 09:35:35
+date: 2026-03-14 11:53:22
+---
+
 # Npm
 
 `npm` 是 Node.js 的包管理工具，用于管理 JavaScript 项目的依赖库、脚本命令等功能。以下内容详细介绍了常用的 npm 命令。

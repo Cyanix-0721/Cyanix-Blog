@@ -1,6 +1,9 @@
 ---
-tags:
-  - Java
+tags: [Java]
+title: Java 对象类型总结
+date created: 2024-10-14 15:47:03
+date modified: 2026-03-14 09:35:20
+date: 2026-03-14 11:53:22
 ---
 
 # Java 对象类型总结

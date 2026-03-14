@@ -1,3 +1,11 @@
+---
+tags: 
+title: Docker CLI 镜像导出
+date created: 2024-08-15 04:19:28
+date modified: 2026-03-14 09:35:34
+date: 2026-03-14 11:53:22
+---
+
 # Docker CLI 镜像导出
 
 下面是通过 CLI 将 Docker 已拉取的镜像导出并上传到服务器，然后在服务器上使用该镜像运行容器的详细步骤：

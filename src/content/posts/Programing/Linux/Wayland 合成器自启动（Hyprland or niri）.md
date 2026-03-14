@@ -1,3 +1,12 @@
+---
+tags: 
+title: Wayland 合成器自启动（Hyprland / niri）
+aliases: Wayland 合成器自启动（Hyprland / niri）
+date created: 2025-10-08 17:02:35
+date modified: 2026-03-14 09:35:24
+date: 2026-03-14 11:53:22
+---
+
 # Wayland 合成器自启动（Hyprland / niri）
 
 在 **Wayland 合成器（Compositor）** 环境下，例如：

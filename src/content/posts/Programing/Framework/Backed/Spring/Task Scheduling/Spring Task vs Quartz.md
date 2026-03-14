@@ -1,3 +1,11 @@
+---
+tags: 
+title: Spring Task vs Quartz
+date created: 2024-09-29 01:17:21
+date modified: 2026-03-14 09:35:38
+date: 2026-03-14 11:53:22
+---
+
 # Spring Task vs Quartz
 
 Spring Task和Quartz都是用于调度任务的框架，但它们的功能和使用场景略有不同：

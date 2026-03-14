@@ -1,12 +1,10 @@
 ---
-tags:
-  - SpringCloud
-  - 分页
-  - SpringBoot
-  - Redis
-  - OpenFegin
-  - Logback
-  - MyBatis
+tags: [SpringCloud, 分页, SpringBoot, Redis, OpenFegin, Logback, MyBatis]
+title: Mall
+aliases: Mall
+date created: 2024-09-25 09:20:45
+date modified: 2026-03-14 09:35:23
+date: 2026-03-14 11:53:22
 ---
 
 # Mall
@@ -1877,30 +1875,30 @@ public class GlobalCorsConfig {
 > ### 工作流程
 > 1. **全局异常捕获**
 >    - 该类通过 `@ControllerAdvice` 注解成为一个全局异常处理器，当应用中的控制器方法抛出异常时，它会自动捕获并处理这些异常，提供统一的异常处理逻辑。
->
+> 
 > 2. **处理自定义API异常**
 >    - `handle(ApiException e)` 方法专门处理自定义的 `ApiException`。如果 `ApiException` 包含错误码（`ErrorCode`），返回带有错误码的 `CommonResult`，否则返回错误信息。
->
+> 
 > 3. **处理方法参数验证异常**
 >    - `handleValidException(MethodArgumentNotValidException e)` 处理当请求参数校验失败时抛出的 `MethodArgumentNotValidException` 异常。通过 `getCommonResult(e.getBindingResult())` 获取绑定的结果（校验失败的信息），并返回包含错误信息的 `CommonResult`。
->
+> 
 > 4. **处理绑定异常**
 >    - `handleValidException(BindException e)` 处理 `BindException` 异常。类似于 `MethodArgumentNotValidException`，它通常也发生在参数校验过程中，通过 `getCommonResult` 来返回验证失败的结果。
->
+> 
 > 5. **生成验证失败的响应**
 >    - `getCommonResult(BindingResult bindingResult)` 方法根据 `BindingResult` 获取字段的错误信息（如果有的话），然后构建并返回验证失败的 `CommonResult`。
->
+> 
 > ### `MethodArgumentNotValidException` 和 `BindException` 的关系与区别
 > 这两个异常都与参数绑定和验证有关，但它们通常在不同的场景下抛出：
 >
 > 1. **`MethodArgumentNotValidException`**
 >    - 这个异常通常发生在**`@RequestBody`** 注解处理的请求参数验证失败时。比如，当你接收到一个 JSON 请求，并且需要将其反序列化为某个对象，如果这个对象的字段不满足校验规则（如 `@NotNull`、`@Size` 等注解的校验），就会抛出 `MethodArgumentNotValidException`。
 >    - 适用于请求体对象（通常是 JSON 请求）。
->
+> 
 > 2. **`BindException`**
 >    - `BindException` 则通常发生在**`@ModelAttribute`** 或表单提交的数据绑定失败时。它也可以用于路径参数或查询参数的绑定验证失败场景。一般来说，这个异常发生在对普通的表单或 URL 参数进行数据绑定时。
 >    - 适用于表单提交、路径或查询参数。
->
+> 
 > ### 总结
 > - `MethodArgumentNotValidException` 用于处理 `@RequestBody` 的 JSON 数据验证错误，而 `BindException` 则更多用于表单或 URL 参数的数据绑定错误。
 > - 在 `GlobalExceptionHandler` 中，这两个异常都通过 `BindingResult` 来提取验证错误信息，统一返回 `CommonResult` 格式的验证失败响应。

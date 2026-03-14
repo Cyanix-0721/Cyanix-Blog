@@ -1,3 +1,12 @@
+---
+tags: 
+title: Nrm
+aliases: Nrm
+date created: 2024-11-27 15:55:11
+date modified: 2026-03-14 09:35:35
+date: 2026-03-14 11:53:22
+---
+
 # Nrm
 
 `nrm` 是一个用于快速切换 NPM 源的小工具，方便开发者在不同的 npm 镜像源之间切换，例如官方源、淘宝源等。以下是 `nrm` 的功能及使用方法。

@@ -1,3 +1,12 @@
+---
+tags: 
+title: Linux Monitor
+aliases: Linux Monitor
+date created: 2024-08-31 03:41:01
+date modified: 2026-03-14 09:35:35
+date: 2026-03-14 11:53:22
+---
+
 # Linux Monitor
 
 在 Arch Linux 上，有几款软件可以方便地查看 CPU/GPU 的温度、频率、风扇转速等信息，并进行调整。以下是一些常用的工具：

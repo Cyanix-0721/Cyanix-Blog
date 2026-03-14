@@ -1,3 +1,11 @@
+---
+tags: 
+title: WebClient
+date created: 2024-10-09 06:42:23
+date modified: 2026-03-14 09:35:38
+date: 2026-03-14 11:53:22
+---
+
 # WebClient
 
 WebClient 是 Spring WebFlux 提供的强大且灵活的 HTTP 客户端，支持同步、异步和响应式编程模型。通过自定义构建、请求过滤器、错误处理和安全认证等功能，可以满足大多数应用场景的需求。在编写高并发、低延迟的应用时，WebClient 的非阻塞特性将大大提高性能和可扩展性。

@@ -1,3 +1,12 @@
+---
+tags: 
+title: Chezmoi 跨平台 Dotfiles 管理指南
+aliases: Chezmoi 跨平台 Dotfiles 管理指南
+date created: 2025-09-28 17:07:42
+date modified: 2026-03-14 09:35:24
+date: 2026-03-14 11:53:22
+---
+
 # Chezmoi 跨平台 Dotfiles 管理指南
 
 > 更多细节请查阅 [Chezmoi 官方文档](https://www.chezmoi.io/) 和 [GitHub 仓库](https://github.com/twpayne/chezmoi)。

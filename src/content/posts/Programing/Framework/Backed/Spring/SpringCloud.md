@@ -1,16 +1,10 @@
 ---
-tags:
-  - "#SpringCloud"
-  - RESTful
-  - SpringBoot
-  - Dubbo
-  - RestTemplate
-  - Eureka
-  - Actuator
-  - Nacos
-  - LoadBalance
-  - OpenFegin
-  - RocketMQ
+tags: ["SpringCloud", RESTful, SpringBoot, Dubbo, RestTemplate, Eureka, Actuator, Nacos, LoadBalance, OpenFegin, RocketMQ, SpringCloudGateway, JWT, Auth0]
+title: Spring Cloud：构建微服务的利器
+aliases: Spring Cloud：构建微服务的利器
+date created: 2024-08-15 04:19:28
+date modified: 2026-03-14 09:35:37
+date: 2026-03-14 11:53:22
 ---
 
 # Spring Cloud：构建微服务的利器
@@ -661,7 +655,6 @@ management:
 
 ### 5.2 Eureka
 
-#Eureka  
 Eureka是一个基于REST的服务注册与发现框架，用于实现微服务架构中的服务治理。其工作流程如下：
 
 1. **服务注册：** 服务提供者在启动时，会主动向Eureka服务器注册自己的信息，包括服务名称、IP地址、端口号等。
@@ -920,7 +913,6 @@ eureka:
 
 ### 5.4 LoadBalance
 
-#LoadBalance  
 负载均衡（Load Balancing）是分布式系统架构中至关重要的一环，旨在将网络请求或工作负载均匀分发到多个服务器上，从而实现系统的高可用性、可扩展性和性能优化。Spring Cloud生态系统中的负载均衡方案经历了从Ribbon到Spring Cloud Loadbalancer的演变。
 
 * **Ribbon：** 最初由Netflix开发，曾是Spring Cloud早期版本中的负载均衡组件。它提供了多种负载均衡算法（如轮询、随机等）以及自定义算法的扩展能力。
@@ -1086,8 +1078,6 @@ public class CustomLoadBalancerConfiguration {
 ````
 
 ### 5.5 Nacos
-
-#Nacos
 
 > [!note] Nacos
 > * [Nacos repo](https://github.com/alibaba/nacos)
@@ -2115,7 +2105,6 @@ public class OrderController {
 
 ### 5.8 网关
 
-#SpringCloudGateway  
 **微服务路由
 
 1. **路由**：准确地将客户端请求转发到正确的微服务实例。
@@ -2375,8 +2364,6 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
 ```
 
 #### 5.8.3 [JSON Web Token (JWT)](https://jwt.io/)
-
-#JWT #Auth0
 
 JWT (JSON Web Token) 是一种开放标准 (RFC 7519)，以 JSON 格式作为载体，用于在不同服务终端之间安全地传递信息。JWT 主要用于用户身份验证，通过数字签名确保信息在传输过程中不被篡改。
 

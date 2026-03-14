@@ -1,3 +1,11 @@
+---
+tags: 
+title: Java 求余
+date created: 2024-09-10 05:41:19
+date modified: 2026-03-14 09:35:34
+date: 2026-03-14 11:53:22
+---
+
 # Java 求余
 
 ## 1 `%` & `Math.floorMod`

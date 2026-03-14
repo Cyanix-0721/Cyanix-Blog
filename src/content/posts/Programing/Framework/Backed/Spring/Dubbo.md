@@ -1,3 +1,11 @@
+---
+tags: 
+title: Dubbo
+date created: 2024-11-12 02:46:33
+date modified: 2026-03-14 09:35:36
+date: 2026-03-14 11:53:22
+---
+
 # Dubbo
 
 本文将详细介绍 Apache Dubbo 的使用，包括其基本概念、核心功能，以及在 Spring Boot 3 中如何集成和使用 Dubbo。

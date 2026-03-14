@@ -1,3 +1,11 @@
+---
+tags: 
+title: Mybatis 二级缓存
+date created: 2024-09-26 06:28:41
+date modified: 2026-03-14 09:35:35
+date: 2026-03-14 11:53:22
+---
+
 # Mybatis 二级缓存
 
 MyBatis的二级缓存是针对整个SqlSessionFactory的缓存机制，能够在多个SqlSession之间共享缓存数据，主要用于提高查询性能。它的使用步骤如下：

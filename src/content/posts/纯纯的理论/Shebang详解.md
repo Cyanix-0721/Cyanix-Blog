@@ -1,3 +1,12 @@
+---
+tags: 
+title: Shebang（#!）详解
+aliases: Shebang（#!）详解
+date created: 2025-09-20 17:08:40
+date modified: 2026-03-14 09:35:20
+date: 2026-03-14 11:53:22
+---
+
 # Shebang（#!）详解
 
 ## 1 什么是Shebang？

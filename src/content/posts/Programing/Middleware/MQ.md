@@ -1,8 +1,9 @@
 ---
-tags:
-  - RabbitMQ
-  - Kafka
-  - RocketMQ
+tags: [RabbitMQ, Kafka, RocketMQ]
+title: MQ
+date created: 2024-08-15 04:19:28
+date modified: 2026-03-14 09:35:25
+date: 2026-03-14 11:53:22
 ---
 
 # MQ
@@ -80,8 +81,6 @@ rectangle 接收者 #Green
 > [RocketMQ Doc](https://github.com/alibaba/spring-cloud-alibaba/wiki/RocketMQ)  
 
 ## 2 RabbitMQ
-
-#RabbitMQ
 
 ### 2.1 安装
 
@@ -1071,17 +1070,17 @@ public void tryPayOrderByBalance (PayOrderDTO payOrderDTO) {
 > **方案：**
 >
 > 1. **消息发送端：** 在发送消息前，将当前登录用户信息（例如用户 ID）存储到消息头（Message Header）中。可以使用 Spring AMQP 提供的 `MessageBuilder` 或 `MessageProperties` 来设置消息头。
->
+> 
 > 2. **消息接收端：** 在消息监听器（Message Listener）中，从消息头中获取登录用户信息。然后，可以使用 ThreadLocal 将用户信息存储在当前线程的上下文（UserContext）中。这样，在后续的业务处理逻辑中，就可以通过 UserContext 方便地获取到登录用户信息。
->
+> 
 > 3. **AOP 切面（可选）：** 为了避免在每个消息监听器中都重复编写获取用户信息并设置 UserContext 的逻辑，可以考虑使用 AOP 切面来统一处理。在切面中，拦截消息监听方法，从消息头中获取用户信息并设置 UserContext，然后执行原始的监听方法。
->
+> 
 > **优点：**
 >
 > - **透明传递：** 使用消息头传递用户信息，对消息发送者和接收者来说是透明的，无需修改业务代码。
 > - **统一获取：** 使用 UserContext 统一获取登录用户信息，保持了编程体验的一致性。
 > - **灵活扩展：** 可以根据需要在消息头中传递其他上下文信息，例如请求 ID、跟踪信息等。
->
+> 
 > **注意事项：**
 >
 > - 需要保证 UserContext 的线程安全性，例如使用 ThreadLocal 来存储用户信息。
@@ -1162,7 +1161,7 @@ docker stop mq
 >
 > - **confirmCallback**：用于确认消息是否成功到达 exchange，返回 `ACK/NACK`
 > - **returnCallback**：用于处理消息无法路由到 queue 的情况  
->
+> 
 > 触发确认的几种情况：
 > - 路由失败：一般是因为 RoutingKey 错误导致，往往是编程导致
 > - 交换机名称错误：同样是编程错误导致
@@ -1490,7 +1489,7 @@ spring:
 > 2. 消息可能被立即重新投递给同一个消费者，导致立即重试。
 > 3. 您可以通过设置 `requeueRejected` 参数为 false，将消息放回队列尾部，避免立即重试。
 > 4. 如果重试次数达到上限，Spring AMQP 会返回 reject，消息会被丢弃或进入死信队列。
->
+> 
 > **返回 reject：**
 >
 > 1. Spring AMQP 默认会丢弃消息或将其放入死信队列。
@@ -1828,7 +1827,7 @@ public void testPublisherDelayMessage() {
 >
 > - 大量延迟消息堆积，增加 CPU 负担
 > - 延迟时间出现误差
->
+> 
 > 因此，**避免设置过长的延迟时间**。
 
 ### 9.3 订单状态同步问题

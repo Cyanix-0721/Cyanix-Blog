@@ -1,3 +1,11 @@
+---
+tags: 
+title: Java Reflector
+date created: 2024-09-18 03:01:22
+date modified: 2026-03-14 09:35:34
+date: 2026-03-14 11:53:22
+---
+
 # Java Reflector
 
 > [!summary]

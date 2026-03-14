@@ -1,3 +1,11 @@
+---
+tags: 
+title: Spring Cloud Alibaba 介绍
+date created: 2024-11-02 09:40:01
+date modified: 2026-03-14 09:35:20
+date: 2026-03-14 11:53:22
+---
+
 # Spring Cloud Alibaba 介绍
 
 Spring Cloud Alibaba 是一个基于 Spring Cloud 技术栈、面向微服务开发的解决方案，为开发分布式应用和微服务提供了一系列组件。它整合了阿里巴巴的基础设施服务，适合高并发和高可用的分布式系统。以下是 Spring Cloud Alibaba 包含的主要组件及其功能：

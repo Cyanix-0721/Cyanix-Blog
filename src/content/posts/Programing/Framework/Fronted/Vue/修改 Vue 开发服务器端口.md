@@ -1,6 +1,10 @@
 ---
-tags:
-  - Vue
+tags: [Vue]
+title: 1 修改 Vue 开发服务器端口
+aliases: 1 修改 Vue 开发服务器端口
+date created: 2024-08-15 04:19:28
+date modified: 2026-03-14 09:35:36
+date: 2026-03-14 11:53:22
 ---
 
 # 1 修改 Vue 开发服务器端口
