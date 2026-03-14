@@ -44,6 +44,10 @@ jobs:
             --filter='- .gitignore' \
             memo_repo/memo/ ./src/content/posts/
 
+      - name: Inject frontmatter if missing
+        run: |
+          python scripts/inject_frontmatter.py
+
       - name: Commit and push if changed
         run: |
           git config user.name "Cyanix-0721"
