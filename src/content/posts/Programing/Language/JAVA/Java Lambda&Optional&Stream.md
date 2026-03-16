@@ -4,7 +4,7 @@ title: Java `Lambda` & `Optional` & `Stream`
 aliases: Java `Lambda` & `Optional` & `Stream`
 date created: 2024-09-14 08:01:35
 date modified: 2026-03-14 09:35:34
-date: 2026-03-16 02:52:23
+date: 2026-03-16 02:52:58
 ---
 
 # Java `Lambda` & `Optional` & `Stream`

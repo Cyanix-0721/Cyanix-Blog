@@ -4,7 +4,7 @@ title: GRUB
 aliases: GRUB
 date created: 2024-08-15 04:19:28
 date modified: 2026-03-14 09:35:22
-date: 2026-03-16 02:52:23
+date: 2026-03-16 02:52:58
 ---
 
 # GRUB

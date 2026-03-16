@@ -3,7 +3,7 @@ tags:
 title: Spring Task vs Quartz
 date created: 2024-09-29 01:17:21
 date modified: 2026-03-14 09:35:38
-date: 2026-03-16 02:52:23
+date: 2026-03-16 02:52:58
 ---
 
 # Spring Task vs Quartz

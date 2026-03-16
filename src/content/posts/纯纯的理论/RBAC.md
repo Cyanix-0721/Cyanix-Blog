@@ -3,7 +3,7 @@ tags:
 title: RBAC
 date created: 2024-11-19 14:11:33
 date modified: 2026-03-14 09:35:20
-date: 2026-03-16 02:52:23
+date: 2026-03-16 02:52:58
 ---
 
 # RBAC

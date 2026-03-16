@@ -4,7 +4,7 @@ title: SpringBoot集成Redisson
 aliases: SpringBoot集成Redisson
 date created: 2024-10-22 17:11:07
 date modified: 2026-03-14 09:35:25
-date: 2026-03-16 02:52:23
+date: 2026-03-16 02:52:58
 ---
 
 # SpringBoot集成Redisson
