@@ -214,6 +214,10 @@
     line-height: 1.7;
     margin: 1.75rem 0;
     position: relative;
+    /* Fix for jagged corners in some browsers */
+    isolation: isolate;
+    transform: translateZ(0);
+    background-clip: padding-box;
   }
   .prose pre code {
     background: transparent !important;
@@ -241,6 +245,9 @@
     align-items: center;
     justify-content: center;
     z-index: 10;
+    /* Smooth edges */
+    transform: translateZ(0);
+    background-clip: padding-box;
   }
   .prose pre:hover .copy-button {
     opacity: 1;
