@@ -2,15 +2,15 @@
 import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
 
-// Fetch all non-draft posts, sorted newest first
+// Fetch all non-draft posts, sorted newest first by dateCreated
 const allPosts = (
   await getCollection('posts', ({ data }) => !data.draft)
-).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+).sort((a, b) => b.data.dateCreated.valueOf() - a.data.dateCreated.valueOf());
 
 // Group posts by year for timeline display
 const postsByYear = allPosts.reduce<Record<number, typeof allPosts>>(
   (acc, post) => {
-    const year = post.data.date.getFullYear();
+    const year = post.data.dateCreated.getFullYear();
     if (!acc[year]) acc[year] = [];
     acc[year].push(post);
     return acc;
@@ -157,10 +157,7 @@ const allTags = [...new Set(allPosts.flatMap((p) => p.data.tags))].sort();
             <!-- Posts for this year -->
             <ul class="space-y-1">
               {postsByYear[year].map((post) => {
-                const monthDay = post.data.date.toLocaleDateString('zh-CN', {
-                  month: '2-digit',
-                  day: '2-digit',
-                });
+                const isoDate = post.data.dateCreated.toISOString();
                 const postTags = post.data.tags;
 
                 return (
@@ -175,10 +172,11 @@ const allTags = [...new Set(allPosts.flatMap((p) => p.data.tags))].sort();
                     >
                       <!-- Date -->
                       <time
-                        datetime={post.data.date.toISOString()}
+                        datetime={isoDate}
+                        data-utc={isoDate}
                         class="w-12 shrink-0 font-mono text-xs text-zinc-600 group-hover:text-zinc-500"
                       >
-                        {monthDay}
+                         <span class="date-display-narrow">{isoDate.slice(5, 10)}</span>
                       </time>
 
                       <!-- Title -->
@@ -243,10 +241,7 @@ const allTags = [...new Set(allPosts.flatMap((p) => p.data.tags))].sort();
 
 <script>
   // ── Client-side search + tag filter ──────────────────────────────────────
-
-  const searchInput = document.getElementById(
-    'post-search'
-  ) as HTMLInputElement | null;
+  const searchInput = document.getElementById('post-search') as HTMLInputElement | null;
   const tagChips = document.querySelectorAll<HTMLButtonElement>('.tag-chip');
   const postItems = document.querySelectorAll<HTMLLIElement>('.post-item');
   const yearGroups = document.querySelectorAll<HTMLDivElement>('.year-group');
@@ -257,50 +252,49 @@ const allTags = [...new Set(allPosts.flatMap((p) => p.data.tags))].sort();
 
   function applyFilters() {
     let visibleCount = 0;
-
     postItems.forEach((item) => {
       const title = item.dataset.title ?? '';
       const tags = item.dataset.tags ?? '';
-
-      const matchesSearch =
-        searchQuery === '' || title.includes(searchQuery) || tags.includes(searchQuery);
-      const matchesTag =
-        activeTag === '' || tags.split(' ').includes(activeTag.toLowerCase());
-
+      const matchesSearch = searchQuery === '' || title.includes(searchQuery) || tags.includes(searchQuery);
+      const matchesTag = activeTag === '' || tags.split(' ').includes(activeTag.toLowerCase());
       const visible = matchesSearch && matchesTag;
       item.style.display = visible ? '' : 'none';
       if (visible) visibleCount++;
     });
-
-    // Hide year groups that have no visible posts
     yearGroups.forEach((group) => {
-      const hasVisible = [...group.querySelectorAll<HTMLLIElement>('.post-item')].some(
-        (el) => el.style.display !== 'none'
-      );
+      const hasVisible = [...group.querySelectorAll<HTMLLIElement>('.post-item')].some((el) => el.style.display !== 'none');
       group.style.display = hasVisible ? '' : 'none';
     });
-
-    if (noResults) {
-      noResults.classList.toggle('hidden', visibleCount > 0);
-    }
+    if (noResults) noResults.classList.toggle('hidden', visibleCount > 0);
   }
 
-  // Search
   searchInput?.addEventListener('input', (e) => {
     searchQuery = (e.target as HTMLInputElement).value.trim().toLowerCase();
     applyFilters();
   });
 
-  // Tag chips
   tagChips.forEach((chip) => {
     chip.addEventListener('click', () => {
       const tag = chip.dataset.tag ?? '';
       activeTag = tag;
-
       tagChips.forEach((c) => c.setAttribute('aria-pressed', 'false'));
       chip.setAttribute('aria-pressed', 'true');
-
       applyFilters();
     });
+  });
+
+  // ── Date hydration ───────────────────────────────────────────────────────
+  const narrowFormatter = new Intl.DateTimeFormat(navigator.language, {
+    month: '2-digit',
+    day: '2-digit',
+  });
+
+  document.querySelectorAll('.date-display-narrow').forEach((el) => {
+    const timeEl = el.closest('time');
+    const utc = timeEl?.getAttribute('data-utc');
+    if (utc) {
+      const date = new Date(utc);
+      el.textContent = narrowFormatter.format(date);
+    }
   });
 </script>
