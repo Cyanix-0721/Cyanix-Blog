@@ -12,20 +12,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.7",
     "@astrojs/mdx": "^5.0.0",
     "@astrojs/vercel": "^10.0.0",
-    "@tailwindcss/vite": "^4.2.1",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
     "astro": "^6.0.4",
-    "rehype-autolink-headings": "^7.1.0",
-    "rehype-slug": "^6.0.0",
-    "remark-wiki-link": "^2.0.1",
     "sharp": "^0.34.5",
-    "tailwindcss": "^4.2.1",
-    "typescript": "^5.9.3",
-    "unist-util-visit": "^5.1.0",
     "zod": "^4.3.6"
   },
   "pnpm": {
@@ -35,7 +27,15 @@
     ]
   },
   "devDependencies": {
+    "@astrojs/check": "^0.9.7",
+    "@tailwindcss/vite": "^4.2.1",
     "@types/mdast": "^4.0.4",
-    "unified": "^11.0.5"
+    "rehype-autolink-headings": "^7.1.0",
+    "rehype-slug": "^6.0.0",
+    "remark-wiki-link": "^2.0.1",
+    "tailwindcss": "^4.2.1",
+    "typescript": "^5.9.3",
+    "unified": "^11.0.5",
+    "unist-util-visit": "^5.1.0"
   }
 }
