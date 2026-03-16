@@ -3,7 +3,7 @@ tags: [Framework, SpringCloud]
 title: Spring Cloud Stream
 date created: 2024-09-14 15:06:01
 date modified: 2026-03-14 09:35:38
-date: 2026-03-15 02:52:39
+date: 2026-03-16 02:52:23
 ---
 
 # Spring Cloud Stream

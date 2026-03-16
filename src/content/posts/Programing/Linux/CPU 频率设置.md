@@ -3,7 +3,7 @@ tags:
 title: CPU 频率设置
 date created: 2025-03-30 05:03:29
 date modified: 2026-03-14 09:35:24
-date: 2026-03-15 02:52:39
+date: 2026-03-16 02:52:23
 ---
 
 # CPU 频率设置
