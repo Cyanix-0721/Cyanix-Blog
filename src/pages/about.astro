@@ -1,16 +1,11 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout
-  title="关于"
-  description="关于 Cyanix 和这个博客。"
->
+<Layout title="关于" description="关于 Cyanix 和这个博客。">
   <!-- Page header -->
-  <header class="mb-10 border-b border-zinc-800 pb-8">
-    <h1 class="text-3xl font-bold tracking-tight text-zinc-50">
-      关于
-    </h1>
+  <header class="mb-10 border-b border-surface-2 pb-8">
+    <h1 class="text-3xl font-bold tracking-tight text-text">关于</h1>
   </header>
 
   <!-- Avatar + intro -->
@@ -18,7 +13,7 @@ import Layout from '../layouts/Layout.astro';
     <!-- Avatar placeholder -->
     <div class="shrink-0">
       <div
-        class="flex h-24 w-24 items-center justify-center rounded-full bg-cyan-950 ring-2 ring-cyan-800/50 text-4xl select-none"
+        class="flex h-24 w-24 items-center justify-center rounded-full bg-accent-muted ring-2 ring-accent-dim/50 text-4xl select-none"
         aria-hidden="true"
       >
         🌊
@@ -26,21 +21,22 @@ import Layout from '../layouts/Layout.astro';
     </div>
 
     <div>
-      <h2 class="mb-2 text-xl font-semibold text-zinc-100">
+      <h2 class="mb-2 text-xl font-semibold text-text">
         Cyanix
-        <span class="ml-2 font-mono text-sm font-normal text-cyan-500">
+        <span class="ml-2 font-mono text-sm font-normal text-accent">
           @Cyanix-0721
         </span>
       </h2>
-      <p class="mb-4 leading-relaxed text-zinc-400">
-        喜欢折腾工具链、自动化流程和知识管理。这里是我的公开笔记本——把在 Obsidian 里写的东西整理后放到这里，供自己回顾，也希望对你有用。
+      <p class="mb-4 leading-relaxed text-text-muted">
+        喜欢折腾工具链、自动化流程和知识管理。这里是我的公开笔记本——把在
+        Obsidian 里写的东西整理后放到这里，供自己回顾，也希望对你有用。
       </p>
       <div class="flex flex-wrap gap-3">
         <a
           href="https://github.com/Cyanix-0721"
           target="_blank"
           rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 rounded-lg border border-zinc-700 bg-zinc-900 px-4 py-2 text-sm text-zinc-300 transition hover:border-cyan-700 hover:text-cyan-300"
+          class="inline-flex items-center gap-2 rounded-lg border border-surface-2 bg-surface-1 px-4 py-2 text-sm text-text-muted transition hover:border-accent hover:text-accent"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -62,24 +58,24 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- Tech stack -->
   <section class="mb-12">
-    <h2 class="mb-5 text-lg font-semibold text-zinc-200">本站技术栈</h2>
+    <h2 class="mb-5 text-lg font-semibold text-text-muted/80">本站技术栈</h2>
     <ul class="grid gap-3 sm:grid-cols-2">
       {
         [
-          { icon: '🚀', name: 'Astro', desc: '静态站点框架，零运行时' },
-          { icon: '✍️', name: 'Obsidian + Markdown', desc: '写作与内容管理' },
-          { icon: '🎨', name: 'Tailwind CSS v4', desc: '原子化 CSS' },
-          { icon: '🔆', name: 'Shiki', desc: '代码语法高亮' },
-          { icon: '🔗', name: 'remark-wiki-link', desc: 'Obsidian 双链支持' },
-          { icon: '▲', name: 'Vercel', desc: '自动部署与托管' },
+          { icon: "🚀", name: "Astro", desc: "静态站点框架，零运行时" },
+          { icon: "✍️", name: "Obsidian + Markdown", desc: "写作与内容管理" },
+          { icon: "🎨", name: "Tailwind CSS v4", desc: "原子化 CSS" },
+          { icon: "🔆", name: "Shiki", desc: "代码语法高亮" },
+          { icon: "🔗", name: "remark-wiki-link", desc: "Obsidian 双链支持" },
+          { icon: "▲", name: "Vercel", desc: "自动部署与托管" },
         ].map(({ icon, name, desc }) => (
-          <li class="flex items-start gap-3 rounded-lg border border-zinc-800 bg-zinc-900/50 px-4 py-3">
+          <li class="flex items-start gap-3 rounded-lg border border-surface-2 bg-surface-1/50 px-4 py-3">
             <span class="mt-0.5 text-xl" aria-hidden="true">
               {icon}
             </span>
             <div>
-              <p class="text-sm font-medium text-zinc-200">{name}</p>
-              <p class="text-xs text-zinc-500">{desc}</p>
+              <p class="text-sm font-medium text-text-muted/80">{name}</p>
+              <p class="text-xs text-text-muted/40">{desc}</p>
             </div>
           </li>
         ))
@@ -89,37 +85,39 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- Workflow -->
   <section class="mb-12">
-    <h2 class="mb-5 text-lg font-semibold text-zinc-200">工作流程</h2>
-    <ol class="relative space-y-6 border-l border-zinc-800 pl-6">
+    <h2 class="mb-5 text-lg font-semibold text-text-muted/80">工作流程</h2>
+    <ol class="relative space-y-6 border-l border-surface-2 pl-6">
       {
         [
           {
-            step: '1',
-            title: '在 Obsidian 写作',
-            desc: '用 Markdown 记录笔记，支持双链、Callout 等 Obsidian 原生语法。',
+            step: "1",
+            title: "在 Obsidian 写作",
+            desc: "用 Markdown 记录笔记，支持双链、Callout 等 Obsidian 原生语法。",
           },
           {
-            step: '2',
-            title: 'Git 同步',
-            desc: '通过 Git 将 Obsidian vault 中的文章同步到本仓库的 src/content/posts/ 目录。',
+            step: "2",
+            title: "Git 同步",
+            desc: "通过 Git 将 Obsidian vault 中的文章同步到本仓库的 src/content/posts/ 目录。",
           },
           {
-            step: '3',
-            title: 'Astro 构建',
-            desc: '推送到 GitHub 后，Vercel 自动触发 Astro 构建，生成纯静态 HTML。',
+            step: "3",
+            title: "Astro 构建",
+            desc: "推送到 GitHub 后，Vercel 自动触发 Astro 构建，生成纯静态 HTML。",
           },
           {
-            step: '4',
-            title: 'Vercel 部署',
-            desc: '构建产物部署到 Vercel CDN，全球访问，免费额度完全够用。',
+            step: "4",
+            title: "Vercel 部署",
+            desc: "构建产物部署到 Vercel CDN，全球访问，免费额度完全够用。",
           },
         ].map(({ step, title, desc }) => (
           <li class="relative">
-            <div class="absolute -left-9 flex h-6 w-6 items-center justify-center rounded-full bg-cyan-950 ring-1 ring-cyan-800/60 text-xs font-bold text-cyan-400">
+            <div class="absolute -left-9 flex h-6 w-6 items-center justify-center rounded-full bg-accent-muted ring-1 ring-accent-dim/60 text-xs font-bold text-accent">
               {step}
             </div>
-            <h3 class="mb-1 text-sm font-semibold text-zinc-200">{title}</h3>
-            <p class="text-sm leading-relaxed text-zinc-500">{desc}</p>
+            <h3 class="mb-1 text-sm font-semibold text-text-muted/80">
+              {title}
+            </h3>
+            <p class="text-sm leading-relaxed text-text-muted/40">{desc}</p>
           </li>
         ))
       }
@@ -128,14 +126,14 @@ import Layout from '../layouts/Layout.astro';
 
   <!-- Contact / links -->
   <section>
-    <h2 class="mb-4 text-lg font-semibold text-zinc-200">联系方式</h2>
-    <p class="text-sm leading-relaxed text-zinc-400">
+    <h2 class="mb-4 text-lg font-semibold text-text-muted/80">联系方式</h2>
+    <p class="text-sm leading-relaxed text-text-muted/60">
       欢迎通过
       <a
         href="https://github.com/Cyanix-0721"
         target="_blank"
         rel="noopener noreferrer"
-        class="text-cyan-400 underline underline-offset-2 hover:text-cyan-300 transition-colors"
+        class="text-accent underline underline-offset-2 hover:text-accent/80 transition-colors"
       >
         GitHub
       </a>
