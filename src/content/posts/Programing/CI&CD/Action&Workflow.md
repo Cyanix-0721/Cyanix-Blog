@@ -2,8 +2,7 @@
 tags: [Github, Action, Workflow, Sync, CI/CD]
 title: Action&Workflow
 date created: 2024-08-15 04:19:28
-date modified: 2026-03-14 09:35:22
-date: 2026-03-16 02:52:58
+date modified: 2026-03-16 03:51:20
 ---
 
 # Action&Workflow
@@ -59,22 +58,22 @@ date: 2026-03-16 02:52:58
 ## 2 仓库同步
 
 > [!note] [[Cron|Cron使用说明]]
+>
+> - 以下 workflow 实现对 B 仓库中目标文件夹更新到 A 仓库目标文件夹
+> 	- `cron`
+> 		- `cron` 是一个用于定期执行任务的时间表工具。例如，`'0 0 * * *'` 表示每天午夜 0 点执行一次工作流
+> 	- `rsync -av --delete`
+> 		- `rsync`: 一个用于同步文件和目录的工具
+> 		- `-a`: 归档模式，保留文件权限、时间戳等信息
+> 		- `-v`: 显示详细的同步过程信息
+> 		- `--delete`: 删除目标目录中在源目录中不存在的文件
+> 	- `secrets.GITHUB_TOKEN`
+> 		- `secrets.GITHUB_TOKEN` 是 GitHub Actions 自动生成的秘密变量，用于在工作流中进行身份验证。
+> 			- **自动生成**: 当工作流运行时，GitHub 会自动生成这个 token，无需手动在仓库设置中创建或填入。
+> 			- **临时性**: 这个 token 只在当前工作流运行期间有效，工作流完成后会自动失效。
+> 			- **权限配置**: 可以通过 `permissions` 配置来指定 token 的权限，控制其对仓库的访问级别，例如读取和写入权限。
 
-- 以下 workflow 实现对 B 仓库中目标文件夹更新到 A 仓库目标文件夹
-	- `cron`
-		- `cron` 是一个用于定期执行任务的时间表工具。例如，`'0 0 * * *'` 表示每天午夜 0 点执行一次工作流
-	- `rsync -av --delete`
-		- `rsync`: 一个用于同步文件和目录的工具
-		- `-a`: 归档模式，保留文件权限、时间戳等信息
-		- `-v`: 显示详细的同步过程信息
-		- `--delete`: 删除目标目录中在源目录中不存在的文件
-	- `secrets.GITHUB_TOKEN`
-		- `secrets.GITHUB_TOKEN` 是 GitHub Actions 自动生成的秘密变量，用于在工作流中进行身份验证。
-			- **自动生成**: 当工作流运行时，GitHub 会自动生成这个 token，无需手动在仓库设置中创建或填入。
-			- **临时性**: 这个 token 只在当前工作流运行期间有效，工作流完成后会自动失效。
-			- **权限配置**: 可以通过 `permissions` 配置来指定 token 的权限，控制其对仓库的访问级别，例如读取和写入权限。
-
-> [!note] `permissions`
+> [!note] Github `permissions` 参数
 >
 > - **`permissions`** 是 GitHub Actions 工作流的一个配置选项，用于定义 `GITHUB_TOKEN` 权限范围。通过设置 `permissions`，可以控制工作流对 GitHub 仓库和资源的访问权限。以下是 `permissions` 配置的一些要点：
 >   - **访问控制**: 通过指定 `permissions`，可以精确控制 `GITHUB_TOKEN` 允许的操作，如读取、写入、创建和删除等。

@@ -4,7 +4,6 @@ title: Windows 电源计划开启 CPU 频率设置
 aliases: Windows 电源计划开启 CPU 频率设置
 date created: 2025-03-29 02:56:21
 date modified: 2026-03-14 09:35:21
-date: 2026-03-16 02:52:58
 ---
 
 # Windows 电源计划开启 CPU 频率设置

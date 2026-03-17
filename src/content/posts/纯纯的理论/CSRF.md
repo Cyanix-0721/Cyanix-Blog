@@ -3,7 +3,6 @@ tags:
 title: CSRF
 date created: 2024-10-08 03:02:31
 date modified: 2026-03-14 09:35:20
-date: 2026-03-16 02:52:58
 ---
 
 # CSRF

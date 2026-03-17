@@ -4,7 +4,6 @@ title: JavaScript 中的变量声明：`var`、`let` 和 `const` 的区别
 aliases: JavaScript 中的变量声明：`var`、`let` 和 `const` 的区别
 date created: 2024-11-21 06:54:22
 date modified: 2026-03-14 09:35:21
-date: 2026-03-16 02:52:58
 ---
 
 # JavaScript 中的变量声明：`var`、`let` 和 `const` 的区别

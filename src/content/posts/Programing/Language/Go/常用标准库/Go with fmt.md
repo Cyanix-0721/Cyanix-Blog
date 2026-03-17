@@ -4,7 +4,6 @@ title: Go with Fmt
 aliases: Go with Fmt
 date created: 2024-09-12 07:04:18
 date modified: 2026-03-14 09:35:37
-date: 2026-03-16 02:52:58
 ---
 
 # Go with Fmt

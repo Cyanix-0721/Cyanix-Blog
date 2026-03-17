@@ -3,7 +3,6 @@ tags: [Go, Language]
 title: Go
 date created: 2024-09-02 07:59:57
 date modified: 2026-03-14 09:35:34
-date: 2026-03-16 02:52:58
 ---
 
 # Go

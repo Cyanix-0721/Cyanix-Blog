@@ -4,7 +4,6 @@ title: Fastfetch
 aliases: Fastfetch
 date created: 2024-08-16 07:12:55
 date modified: 2026-03-14 09:35:24
-date: 2026-03-16 02:52:58
 ---
 
 # Fastfetch

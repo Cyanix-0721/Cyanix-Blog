@@ -3,7 +3,6 @@ tags:
 title: Spring Cache
 date created: 2024-11-19 15:20:53
 date modified: 2026-03-14 09:35:36
-date: 2026-03-16 02:52:58
 ---
 
 # Spring Cache

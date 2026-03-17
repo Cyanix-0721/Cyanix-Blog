@@ -3,7 +3,6 @@ tags: [CI/CD, Jenkins]
 title: Jenkins
 date created: 2024-09-19 08:13:43
 date modified: 2026-03-14 09:35:22
-date: 2026-03-16 02:52:58
 ---
 
 # Jenkins

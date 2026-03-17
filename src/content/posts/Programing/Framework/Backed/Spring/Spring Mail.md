@@ -3,7 +3,6 @@ tags: [SpringBoot, Mail]
 title: Spring Mail
 date created: 2024-09-29 02:24:16
 date modified: 2026-03-14 09:35:36
-date: 2026-03-16 02:52:58
 ---
 
 # Spring Mail

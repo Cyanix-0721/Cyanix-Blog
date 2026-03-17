@@ -3,7 +3,6 @@ tags:
 title: Windows 11 LTSC 24H2 电池模式死机问题整理
 date created: 2026-02-24 12:00:02
 date modified: 2026-03-14 09:35:19
-date: 2026-03-16 02:52:58
 ---
 
 # Windows 11 LTSC 24H2 电池模式死机问题整理

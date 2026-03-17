@@ -3,7 +3,6 @@ tags: [Bootloader, Linux, rEFInd]
 title: rEFInd
 date created: 2024-08-15 04:19:28
 date modified: 2026-03-14 09:35:22
-date: 2026-03-16 02:52:58
 ---
 
 # [rEFInd](http://www.rodsbooks.com/refind/)
