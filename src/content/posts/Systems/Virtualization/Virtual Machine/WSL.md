@@ -3,7 +3,7 @@ tags: []
 title: Windows Subsystem Linux
 aliases: Windows Subsystem Linux
 date created: 2024-08-15 04:19:28
-date modified: 2026-03-27 07:11:08
+date modified: 2026-08-06 10:22:32
 ---
 
 # Windows Subsystem Linux
