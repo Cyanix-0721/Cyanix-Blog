@@ -1,7 +1,7 @@
 ---
 tags: []
 date created: 2026-04-30 10:00:52
-date modified: 2026-08-18 01:58:36
+date modified: 2026-08-28 03:42:55
 title: 查询可用 IP
 ---
 
@@ -51,16 +51,10 @@ arp -a | findstr "78-20-00"
 
 利用 `&` 放入后台并行执行，几秒钟即可完成全网段扫描。
 
-- **扫描并查看邻居表 (获取最准的已占用列表)：**
-
-```bash
-for i in {1.}; do ping -c1 -W1 192.168.1.$i >/dev/null 2>&1 & done; wait; ip neigh | grep "192.168.1."
-```
-
 - **仅列出空闲 (FREE) 的 IP 地址：**
 
 ```bash
-for i in {1.}; do (ping -c1 -W1 192.168.1.$i >/dev/null 2>&1 || echo "192.168.1.$i FREE") & done; wait
+for i in $(seq 1 254); do (ping -c1 -W1 192.168.1.$i >/dev/null 2>&1 || echo "192.168.1.$i FREE") & done; wait
 ```
 
 ## 3 核心避坑指南
