@@ -1,7 +1,7 @@
 ---
 tags: []
 date created: 2026-04-30 10:00:52
-date modified: 2026-08-28 03:42:55
+date modified: 2026-09-02 04:54:27
 title: 查询可用 IP
 ---
 
@@ -38,7 +38,7 @@ for /L %i in (1,1,254) do @start /b ping -n 1 -w 100 192.168.1.%i >nul
 - **第二步：查看 ARP 表记录：**
 
 ```cmd
-arp -a | findstr "78-20-00"
+arp -a"
 ```
 
 > [!note] 删除现有 ARP 缓存
